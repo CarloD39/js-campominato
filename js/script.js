@@ -56,4 +56,22 @@ console.log('numbers by computer',computerNumbers);
 var userNumbers =[]; // array vuoto per definire punteggio finale;
 var gameOver = false;
 
-//apro un ciclo while per l'utente come fatto per i computerNumbers; 
+while (userNumbers.length < 84) { //apro un ciclo while per l'utente come fatto per i computerNumbers; 
+
+    var pickedNUmber = parseInt(prompt('scrivi un numero compreso tra 1 e 100'));
+
+    if (!userNumbers.includes(pickedNUmber)){
+
+        if(computerNumbers.includes(pickedNUmber)) {
+            alert('Sei finito su una mina!')
+            gameOver = true;
+            break;
+
+        } else {
+            userNumbers.includes(pickedNUmber);
+            console.log('I numeri totali dell\'utente :', userNumbers );
+        }
+
+    }
+
+} 
