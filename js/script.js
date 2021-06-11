@@ -38,7 +38,7 @@ function getRandomNumber (min, max){
 
 }
 
-while(computerNumbers < 16){
+while(computerNumbers < 16){  //apro ciclo while per i numeri generati dal computer;
 
     var randomNumbers = getRandomNumber(1,100);
 
@@ -60,7 +60,7 @@ while (userNumbers.length < 84) { //apro un ciclo while per l'utente come fatto 
 
     var pickedNUmber = parseInt(prompt('scrivi un numero compreso tra 1 e 100'));
 
-    if (!userNumbers.includes(pickedNUmber)){
+    if (!userNumbers.includes(pickedNUmber)){  //se il numero dell'utente NON è incluso neòò'array;
 
         if(computerNumbers.includes(pickedNUmber)) {
             alert('Sei finito su una mina!')
@@ -72,6 +72,16 @@ while (userNumbers.length < 84) { //apro un ciclo while per l'utente come fatto 
             console.log('I numeri totali dell\'utente :', userNumbers );
         }
 
+    } else {
+        alert('Riprova! Hai inserito un numero duplicato');
     }
 
 } 
+
+if (!gameOver) { //doppia negazione;
+    alert('Hai vinto')
+} else{
+    alert('Hai perso !')
+}
+
+alert('Il punteggio finale è' + userNumbers.length);
