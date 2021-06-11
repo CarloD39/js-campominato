@@ -29,16 +29,15 @@
 
 // COMPUTER PART
 
-var computerNumbers = ['']; //array vuoto;
-
-
 function getRandomNumber (min, max){
   
-    return Math.floor(Math.random() * (max - min + 1)) + min; // credo un number randomico da 1 a 100;
+    return Math.floor(Math.random() * (max - min + 1) + min); // credo un number randomico da 1 a 100;
 
 }
 
-while(computerNumbers < 16){  //apro ciclo while per i numeri generati dal computer;
+var computerNumbers = []; //array vuoto;
+
+while(computerNumbers.length < 16){  //apro ciclo while per i numeri generati dal computer;
 
     var randomNumbers = getRandomNumber(1,100);
 
@@ -48,40 +47,40 @@ while(computerNumbers < 16){  //apro ciclo while per i numeri generati dal compu
     }
 }
 
-console.log('numbers by computer',computerNumbers);
+console.log('numbers by computer' + computerNumbers);
 
 
 // USER PART
 
-var userNumbers =[]; // array vuoto per definire punteggio finale;
-var gameOver = false;
+// var userNumbers =[]; // array vuoto per definire punteggio finale;
+// var gameOver = false;
 
-while (userNumbers.length < 84) { //apro un ciclo while per l'utente come fatto per i computerNumbers; 
+// while (userNumbers.length < 84) { //apro un ciclo while per l'utente come fatto per i computerNumbers; 
 
-    var pickedNUmber = parseInt(prompt('scrivi un numero compreso tra 1 e 100'));
+//     var pickedNUmber = parseInt(prompt('scrivi un numero compreso t ra 1 e 100'));
 
-    if (!userNumbers.includes(pickedNUmber)){  //se il numero dell'utente NON è incluso neòò'array;
+//     if (!userNumbers.includes(pickedNUmber)){  //se il numero dell'utente NON è incluso neòò'array;
 
-        if(computerNumbers.includes(pickedNUmber)) {
-            alert('Sei finito su una mina!')
-            gameOver = true;
-            break;
+//         if(computerNumbers.includes(pickedNUmber)) {
+//             alert('Sei finito su una mina!')
+//             gameOver = true;
+//             break;
 
-        } else {
-            userNumbers.includes(pickedNUmber);
-            console.log('I numeri totali dell\'utente :', userNumbers );
-        }
+//         } else {
+//             userNumbers.includes(pickedNUmber);
+//             console.log('I numeri totali dell\'utente :', userNumbers );
+//         }
 
-    } else {
-        alert('Riprova! Hai inserito un numero duplicato');
-    }
+//     } else {
+//         alert('Riprova! Hai inserito un numero duplicato');
+//     }
 
-} 
+// } 
 
-if (!gameOver) { //doppia negazione;
-    alert('Hai vinto')
-} else{
-    alert('Hai perso !')
-}
+// if (!gameOver) { //doppia negazione;
+//     alert('Hai vinto')
+// } else{
+//     alert('Hai perso !')
+// }
 
-alert('Il punteggio finale è' + userNumbers.length);
+// alert('Il punteggio finale è' + userNumbers.length);
