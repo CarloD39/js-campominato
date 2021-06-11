@@ -36,10 +36,11 @@ function getRandomNumber (min, max){
 }
 
 var computerNumbers = []; //array vuoto;
+var generateNumber = 16;
 
-while(computerNumbers.length < 16){  //apro ciclo while per i numeri generati dal computer;
+while(computerNumbers.length < generateNumber){  //apro ciclo while per i numeri generati dal computer;
 
-    var randomNumbers = getRandomNumber(1,100);
+    var randomNumbers = getRandomNumber(1,70);
 
     if(!computerNumbers.includes(randomNumbers)) {   // ! = se computerNumbers NON include randomNumbers;
 
@@ -52,35 +53,35 @@ console.log('numbers by computer' + computerNumbers);
 
 // USER PART
 
-// var userNumbers =[]; // array vuoto per definire punteggio finale;
-// var gameOver = false;
+var userNumbers =[]; // array vuoto per definire punteggio finale;
+var gameOver = false;
 
-// while (userNumbers.length < 84) { //apro un ciclo while per l'utente come fatto per i computerNumbers; 
+while (userNumbers.length < 35) { //apro un ciclo while per l'utente come fatto per i computerNumbers; 
 
-//     var pickedNUmber = parseInt(prompt('scrivi un numero compreso t ra 1 e 100'));
+    var pickedNUmber = parseInt(prompt('scrivi un numero compreso t ra 1 e 100'));
 
-//     if (!userNumbers.includes(pickedNUmber)){  //se il numero dell'utente NON è incluso neòò'array;
+    if (!userNumbers.includes(pickedNUmber)){  //se il numero dell'utente NON è incluso neòò'array;
 
-//         if(computerNumbers.includes(pickedNUmber)) {
-//             alert('Sei finito su una mina!')
-//             gameOver = true;
-//             break;
+        if(computerNumbers.includes(pickedNUmber)) {
+            alert('Sei finito su una mina!')
+            gameOver = true;
+            break;
 
-//         } else {
-//             userNumbers.includes(pickedNUmber);
-//             console.log('I numeri totali dell\'utente :', userNumbers );
-//         }
+        } else {
+            userNumbers.includes(pickedNUmber);
+            console.log('I numeri totali dell\'utente :', userNumbers );
+        }
 
-//     } else {
-//         alert('Riprova! Hai inserito un numero duplicato');
-//     }
+    } else {
+        alert('Riprova! Hai inserito un numero duplicato');
+    }
 
-// } 
+} 
 
-// if (!gameOver) { //doppia negazione;
-//     alert('Hai vinto')
-// } else{
-//     alert('Hai perso !')
-// }
+if (!gameOver) { //doppia negazione;
+    alert('Hai vinto')
+} else{
+    alert('Hai perso !')
+}
 
-// alert('Il punteggio finale è' + userNumbers.length);
+alert('Il punteggio finale è' + userNumbers.length);
