@@ -16,7 +16,7 @@
 
 // ora listNum contiene 16 numeri NON duplicati.
 
-// while userNums.length <= 84
+// while userNums.length < 84
 //     chiedi all'utente un numero 
 //     if num (quello inserito dall'utente) not in array userNums:
 //         if num in array listNum (numeri generati dal computer), then break. // il gioco è finito, si stoppa il ciclo.
@@ -24,12 +24,17 @@
 
 // risultato, stampo lo score che è userNums.length.
 
-var computerNumbers = [''];
+
+
+
+// COMPUTER PART
+
+var computerNumbers = ['']; //array vuoto;
 
 
 function getRandomNumber (min, max){
   
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min; // credo un number randomico da 1 a 100;
 
 }
 
@@ -37,7 +42,7 @@ while(computerNumbers < 16){
 
     var randomNumbers = getRandomNumber(1,100);
 
-    if(!computerNumbers.includes(randomNumbers)) {
+    if(!computerNumbers.includes(randomNumbers)) {   // ! = se computerNumbers NON include randomNumbers;
 
         computerNumbers.push(randomNumbers);
     }
@@ -46,4 +51,9 @@ while(computerNumbers < 16){
 console.log('numbers by computer',computerNumbers);
 
 
+// USER PART
 
+var userNumbers =[]; // array vuoto per definire punteggio finale;
+var gameOver = false;
+
+//apro un ciclo while per l'utente come fatto per i computerNumbers; 
